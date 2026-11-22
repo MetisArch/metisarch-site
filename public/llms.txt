@@ -1,0 +1,19 @@
+# MetisArch
+
+> Servidor local Model Context Protocol (MCP) e motor de RAG local que transforma a documentação do produto em uma base de conhecimento ativa para qualquer assistente de IA ou IDE compatível com MCP.
+
+## Visão Geral
+O **MetisArch** resolve o paradoxo da documentação na era da IA: textos gerados em abundância que ninguém tem tempo de ler e que ficam obsoletos rapidamente. Em vez de manter manuais estáticos em wikis isoladas do código, o MetisArch indexa regras de negócio, decisões de produto e múltiplos repositórios em um motor de RAG 100% local, expondo esse contexto via protocolo padrão **MCP (Model Context Protocol)**.
+
+## Principais Capacidades
+- **RAG Local & Instantâneo**: Recuperação precisa de regras de negócio e código diretamente na máquina do usuário, sem enviar dados para servidores de terceiros e sem exigir chaves de API externas.
+- **Protocolo Padrão MCP**: Compatível com qualquer editor, IDE, agente ou assistente de IA que aceite conexões MCP.
+- **Documentação Ativa no Dia a Dia**:
+  1. **Guia a escrita de código**: Entrega apenas a regra exata para a tarefa em andamento, evitando alucinações.
+  2. **Audita alterações antes do Pull Request**: Compara o resumo comportamental das mudanças locais contra as regras ativas da base de conhecimento.
+  3. **Evolução contínua com curadoria humana**: Novas regras ou decisões tomadas durante o desenvolvimento são enviadas para uma fila de revisão visual (antes/depois) e aprovadas com 1 clique.
+- **Base de Conhecimento Multi-Repositório**: Agrupa múltiplos repositórios (locais, GitHub e Azure DevOps) e documentos (`.md`, PDFs, planilhas, contratos OpenAPI) por domínio de negócio, com escopo isolado por projeto.
+
+## Planos e Execução
+- **Plano Básico (Grátis para sempre)**: Uso individual para Linux, macOS e Windows, com motor RAG 100% local, 1 workspace e até 5 projetos vinculados.
+- **Plano Profissional (Equipes & Self-Hosted)**: Workspaces e projetos ilimitados, sincronização da base de conhecimento em equipe via Git (GitHub / Azure DevOps) e execução Self-Hosted em container Docker na infraestrutura da empresa.

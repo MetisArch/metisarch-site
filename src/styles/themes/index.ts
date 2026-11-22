@@ -1,0 +1,28 @@
+export const theme = {
+  colors: {
+    background: '#0c0e14',
+    rail: '#090a0f',
+    surface: '#10131b',
+    surfaceRaised: '#10131b',
+    surfaceHover: '#161b29',
+    foreground: '#edf1f7',
+    foregroundMuted: '#828c9e',
+    foregroundSubtle: '#636a79',
+    accent: '#191e2b',
+    border: '#1c2231',
+    borderSoft: '#181c29',
+    brand: '#7f56d9',
+    brandForeground: '#ffffff',
+    brandHover: '#7048c6',
+    brandSoft: 'rgba(127, 86, 217, 0.15)',
+    danger: '#f04438',
+    success: '#12b76a',
+    warning: '#f79009',
+    info: '#6172f3',
+  },
+  fontFamily: {
+    cal: '"Cal Sans", ui-serif, Georgia, Cambria, "times new roman", Times, serif',
+    sans: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    mono: '"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+  },
+}

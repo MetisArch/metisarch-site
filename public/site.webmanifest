@@ -1,0 +1,16 @@
+{
+  "name": "MetisArch — RAG Local & Base de Conhecimento via Protocolo MCP",
+  "short_name": "MetisArch",
+  "description": "Transforme sua documentação em uma base de conhecimento ativa via RAG local e protocolo MCP.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0e14",
+  "theme_color": "#0c0e14",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
