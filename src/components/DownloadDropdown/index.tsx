@@ -29,11 +29,11 @@ import {
   Wrapper,
 } from './styles'
 
-const RELEASES_URL = 'https://github.com/Guilherme-Humberto/metisarch/releases'
+const RELEASES_URL = 'https://github.com/metisarch/metisarch-app/releases'
 
 const DOCKER_COMPOSE_SNIPPET = `services:
   metisarch:
-    image: ghcr.io/guilherme-humberto/metisarch:latest
+    image: ghcr.io/metisarch/metisarch-app:latest
     container_name: metisarch-server
     restart: unless-stopped
     ports:
@@ -59,7 +59,7 @@ const DOCKER_CLI_SNIPPET = `docker run -d \\
   -e METIS_LICENSE_KEY="XXXX-XXXX-XXXX-XXXX" \\
   -v metis-data:/data \\
   -v $(pwd)/workspace:/workspace \\
-  ghcr.io/guilherme-humberto/metisarch:latest`
+  ghcr.io/metisarch/metisarch-app:latest`
 
 interface DownloadDropdownProps {
   label: string
