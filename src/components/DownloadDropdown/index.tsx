@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { APP_RELEASE_CONFIG } from '@/config/releases'
 import {
   ChevronSvg,
   CloseIconBtn,
@@ -28,8 +29,6 @@ import {
   TriggerBtn,
   Wrapper,
 } from './styles'
-
-const RELEASES_URL = 'https://github.com/metisarch/metisarch-app/releases'
 
 const DOCKER_COMPOSE_SNIPPET = `services:
   metisarch:
@@ -145,13 +144,7 @@ export const DownloadDropdown: React.FC<DownloadDropdownProps> = ({ label, fullW
 
         {open && (
           <MenuPanel role="menu">
-            <MenuItemLink
-              href={RELEASES_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              role="menuitem"
-              onClick={() => setOpen(false)}
-            >
+            <MenuItemLink href={APP_RELEASE_CONFIG.files.windows.url} role="menuitem" onClick={() => setOpen(false)}>
               <IconBadge>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M3 5.5 10.5 4.5v7H3v-6zm0 13 7.5 1v-7H3v6zm8.5 1.15L21 21v-8.5h-9.5v7.15zm0-15.3V11.5H21V3l-9.5 1.35z" />
@@ -163,31 +156,7 @@ export const DownloadDropdown: React.FC<DownloadDropdownProps> = ({ label, fullW
               </ItemTextCol>
             </MenuItemLink>
 
-            <MenuItemLink
-              href={RELEASES_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              role="menuitem"
-              onClick={() => setOpen(false)}
-            >
-              <IconBadge>
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3" />
-                </svg>
-              </IconBadge>
-              <ItemTextCol>
-                <ItemTitle>{t('hero.downloadMenu.mac')}</ItemTitle>
-                <ItemSub>{t('hero.downloadMenu.macSub')}</ItemSub>
-              </ItemTextCol>
-            </MenuItemLink>
-
-            <MenuItemLink
-              href={RELEASES_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              role="menuitem"
-              onClick={() => setOpen(false)}
-            >
+            <MenuItemLink href={APP_RELEASE_CONFIG.files.linuxDeb.url} role="menuitem" onClick={() => setOpen(false)}>
               <IconBadge>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -205,8 +174,54 @@ export const DownloadDropdown: React.FC<DownloadDropdownProps> = ({ label, fullW
                 </svg>
               </IconBadge>
               <ItemTextCol>
-                <ItemTitle>{t('hero.downloadMenu.linux')}</ItemTitle>
-                <ItemSub>{t('hero.downloadMenu.linuxSub')}</ItemSub>
+                <ItemTitle>{t('hero.downloadMenu.linuxDeb')}</ItemTitle>
+                <ItemSub>{t('hero.downloadMenu.linuxDebSub')}</ItemSub>
+              </ItemTextCol>
+            </MenuItemLink>
+
+            <MenuItemLink
+              href={APP_RELEASE_CONFIG.files.linuxAppImage.url}
+              role="menuitem"
+              onClick={() => setOpen(false)}
+            >
+              <IconBadge>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                  <line x1="12" y1="22.08" x2="12" y2="12" />
+                </svg>
+              </IconBadge>
+              <ItemTextCol>
+                <ItemTitle>{t('hero.downloadMenu.linuxAppImage')}</ItemTitle>
+                <ItemSub>{t('hero.downloadMenu.linuxAppImageSub')}</ItemSub>
+              </ItemTextCol>
+            </MenuItemLink>
+
+            <MenuItemLink
+              href={APP_RELEASE_CONFIG.releasesPageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              role="menuitem"
+              onClick={() => setOpen(false)}
+            >
+              <IconBadge>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3" />
+                </svg>
+              </IconBadge>
+              <ItemTextCol>
+                <ItemTitle>{t('hero.downloadMenu.mac')}</ItemTitle>
+                <ItemSub>{t('hero.downloadMenu.macSub')}</ItemSub>
               </ItemTextCol>
             </MenuItemLink>
 

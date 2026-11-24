@@ -46,7 +46,7 @@ export const MenuPanel = styled.div`
   left: 50%;
   transform: translateX(-50%);
   z-index: 120;
-  width: 245px;
+  width: 270px;
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
