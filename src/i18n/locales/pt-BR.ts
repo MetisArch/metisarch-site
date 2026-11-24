@@ -29,8 +29,8 @@ export const ptBR = {
     title: 'Tire sua documentação da gaveta. Coloque-a para trabalhar com a IA.',
     subtitle: 'Uma base de conhecimento ativa que participa das suas tarefas todos os dias.',
     lead: 'Transforme regras e documentos em um RAG local via protocolo MCP para guiar o código, validar mudanças e evoluir junto com o produto — em qualquer IA compatível.',
-    primaryCta: 'Baixar MetisArch grátis',
-    secondaryCta: 'Conhecer os planos',
+    primaryCta: 'Baixar MetisArch Grátis',
+    secondaryCta: 'Conhecer os Planos',
     windowAddress: 'MetisArch Desktop • Base de Conhecimento & Servidor MCP',
     downloadMenu: {
       windows: 'Windows',

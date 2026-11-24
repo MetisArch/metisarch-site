@@ -29,8 +29,8 @@ export const enUS: typeof import('./pt-BR').ptBR = {
     title: 'Take your documentation off the shelf. Put it to work with AI.',
     subtitle: 'An active knowledge base that participates in your daily tasks.',
     lead: 'Turn rules and documents into a local RAG engine via the MCP protocol to guide code, validate changes, and evolve with your product — across any compatible AI.',
-    primaryCta: 'Download MetisArch free',
-    secondaryCta: 'Explore plans',
+    primaryCta: 'Download MetisArch Free',
+    secondaryCta: 'Explore Plans',
     windowAddress: 'MetisArch Desktop • Knowledge Base & MCP Server',
     downloadMenu: {
       windows: 'Windows',
